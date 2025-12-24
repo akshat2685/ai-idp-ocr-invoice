@@ -1,51 +1,55 @@
-# AI-Based Intelligent Document Processing (IDP)
+# 📄 AI-Based Intelligent Document Processing (IDP)
 
-This project demonstrates a basic end-to-end pipeline for **Intelligent Document Processing (IDP)** using **OCR, Python, and NLP concepts**. The objective is to extract structured information from unstructured document images.
+This repository demonstrates a simple end-to-end Intelligent Document Processing (IDP) pipeline using OCR (Optical Character Recognition) and basic NLP techniques in Python. It extracts text from an invoice image, identifies important fields, and structures them in JSON format.
 
 ---
 
-## 📄 Document Type
+## 🧾 Document Type
 **Invoice**
 
-A sample invoice image is used to demonstrate text extraction and key-field identification.
+We use a sample invoice image to extract:
+- Invoice Number
+- Date
+- Total Amount
 
 ---
 
-## 🛠️ Tools & Technologies Used
+## 🛠️ Tools & Technologies
 
-- **Python**
-- **Tesseract OCR** – for text extraction
-- **OpenCV** – image preprocessing
-- **Regex** – rule-based information extraction
-- **JSON** – structured output format
-- **Google Colab** – development environment
+**Languages & Libraries**
+- Python
+- Google Colab
 
----
+**OCR & Image Processing**
+- Tesseract OCR (`pytesseract`)
+- OpenCV for preprocessing
 
-## 🧠 Approach
-
-1. **Document Input**  
-   An invoice image is uploaded to the system.
-
-2. **Image Preprocessing**  
-   The image is converted to grayscale and thresholding is applied to improve OCR accuracy.
-
-3. **Text Extraction (OCR)**  
-   Tesseract OCR is used to extract raw textual content from the processed image.
-
-4. **Key Field Identification**  
-   Important fields such as:
-   - Invoice Number  
-   - Invoice Date  
-   - Total Amount  
-   are extracted using regular expressions.
-
-5. **Structured Output**  
-   The extracted fields are organized into a clean **JSON format**, making the data suitable for downstream applications.
+**Text Processing**
+- Regular Expressions (Regex)
+- JSON for output formatting
 
 ---
 
-## 📊 Sample Output (JSON)
+## 🚀 Approach
+
+1. **Image Upload:**  
+   Upload a scanned invoice image to Colab.
+
+2. **Image Preprocessing:**  
+   Convert the image to grayscale and apply thresholding to improve OCR accuracy.
+
+3. **Text Extraction:**  
+   Use Tesseract OCR to extract text from the processed invoice image.
+
+4. **Field Extraction:**  
+   Parse the OCR text using regex to extract key fields like invoice number, date, and totals.
+
+5. **Structured Output:**  
+   Output the extracted information in clean **JSON format**.
+
+---
+
+## 🧪 Sample Output
 
 ```json
 {
